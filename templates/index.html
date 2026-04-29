@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaStudio | Creative Digital Excellence</title>
+    <meta name="description" content="NovaStudio is a premier creative agency specializing in modern digital experiences, design, and development.">
+    
+    <!-- Google Fonts: Outfit and Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">Nova<span>Studio</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-primary">Work With Us</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">Next Generation Agency</span>
+                    <h1 class="reveal">Crafting Digital <br><span class="gradient-text">Masterpieces</span></h1>
+                    <p class="reveal-delay">We blend art and technology to build immersive digital experiences that elevate your brand to the next level.</p>
+                    <div class="hero-actions reveal-delay-2">
+                        <a href="#services" class="btn-primary">Explore Our Work</a>
+                        <a href="#about" class="btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="blob"></div>
+                <img src="{{ url_for('static', filename='img/hero_visual.webp') }}" alt="Creative Studio Visual" id="hero-image">
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">Our Expertise</span>
+                    <h2>Services that Drive <span class="gradient-text">Growth</span></h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card glass">
+                        <div class="icon-box"><i class="fas fa-bezier-curve"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centric designs that are intuitive, beautiful, and highly functional.</p>
+                    </div>
+                    <div class="service-card glass">
+                        <div class="icon-box"><i class="fas fa-code"></i></div>
+                        <h3>Development</h3>
+                        <p>Scalable, performant, and secure web applications built with modern tech.</p>
+                    </div>
+                    <div class="service-card glass">
+                        <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Digital Strategy</h3>
+                        <p>Data-driven strategies to grow your online presence and reach your goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="subtitle">Who We Are</span>
+                        <h2>Passionate About <span class="gradient-text">Innovation</span></h2>
+                        <p>At NovaStudio, we don't just build websites; we create digital ecosystems. Our team of visionaries and tech enthusiasts works tirelessly to push the boundaries of what's possible.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="glass-orb"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="glass contact-card">
+                    <div class="contact-info">
+                        <h2>Ready to <span class="gradient-text">Start?</span></h2>
+                        <p>Tell us about your project and let's build something amazing together.</p>
+                        <div class="contact-details">
+                            <div class="detail"><i class="fas fa-envelope"></i> hello@novastudio.com</div>
+                            <div class="detail"><i class="fas fa-phone"></i> +1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Tell us about your project" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Nova<span>Studio</span></div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+                <p>&copy; 2026 NovaStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
